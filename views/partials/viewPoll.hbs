@@ -1,0 +1,39 @@
+{{#if noPolls}}
+
+<h2>Sorry, No Polls Yet! Click New Poll to make one!</h2>
+
+{{else}}
+
+<ul class="list-group list-group-ul">
+    {{#each polls}}   
+        <li class="list-group-item list-group-flex">
+            <a href="/users/profile#0" id="poll-names" class="poll-names accordian">{{ question }}<span class="small-italic"></span></a>
+            <div class="accordian-panel">
+                <form action="/users/profile/{{ id }}?_method=PUT" method="post">                       
+                    <div class="container">
+                        <h2 class="center">Edit Your Poll</h2>
+                        <h5 class="blue-text center">Here is where you can edit your poll if there is anything you would like to change.</h5>                                
+                    </div>                       
+                    <div class="container poll-edit-box">
+                        <div class="form-group">
+                            <label for="question">Question</label>
+                            <input type="text" id="question" name="question" class="update-input" value="{{ question }}">
+                        </div>
+                        {{#each options}}
+                            <div class="form-group">
+                                <label for="option">Option</label>
+                                <input type="text" name="option" class="update-input" value="{{ option }}">
+                            </div>
+                        {{/each }}
+                        <button class="submit" type="submit">Submit</button>           
+                    </div>                 
+                </form>
+            </div>
+            <form action="/users/profile/{{ id }}?_method=DELETE" method="post">
+                <span class="trash-icon"><a href="/users/profile/{{ id }}"><button class="trash-button" type="submit"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></a></span>
+            </form>                     
+        </li>           
+    {{/each }}
+</ul>
+
+{{/if }}

@@ -1,0 +1,16 @@
+<div class="jumbotron center">
+    <div class="container">
+        {{#if homePage}}
+            <h1 class="jumbotron-lead">Welcome to my Poll Voting App</h1>
+                <p>click below to view user polls that are currently available</p>
+                <p><a class="button center-m" href="#home" role="button">Learn more &raquo;</a></p>
+        {{else if profilePage}}
+            <h1 class="jumbotron-lead">Welcome to the Dashboard {{ username }} </h1>
+                <p>To get started creating live polls click below:</p> 
+                <div class="button-wrapper">
+                    <a class="button newPollButton" href="#createPoll" role="button">New Poll</a>
+                    <a class="button" href="#myPolls" role="button">My Polls</a>
+                </div>
+        {{/if }}
+    </div>
+</div>

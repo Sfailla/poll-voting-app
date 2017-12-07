@@ -1,0 +1,18 @@
+section#createPoll {
+    min-height: 400px;
+    line-height: 2;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.closeForm {
+    font-size: 35px;
+    color: black;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+.optionButton {
+    background: royalblue;
+}

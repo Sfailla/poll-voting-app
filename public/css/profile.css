@@ -1,0 +1,74 @@
+section#profile {
+    min-height: 800px;
+}
+.list-group-ul {
+    padding-bottom: 200px;
+}
+.list-group-flex {
+    max-width: 800px;
+    min-width: 340px;
+    margin: 0 auto;
+    font-size: 18px;
+    padding-top: 10px;
+    position: relative;
+}
+span.trash-icon a {
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    cursor: pointer; 
+    color: crimson;
+    cursor: pointer;  
+}
+span.trash-icon a button {
+    width: 30px;
+    height: 30px;
+    background: white;
+    cursor: pointer;
+}
+span.trash-icon a button i {
+    color: crimson;
+}
+.poll-names {
+    height: 30px;
+    width: 100%;
+    color: blue;
+}
+.poll-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.poll-edit-box {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+a.accordian {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+a.accordian.active, button.accordian:hover {
+    padding-bottom: 10px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.accordian-panel {
+    padding: 20px;
+    border-top: 1px solid black;
+    display: none;
+}
+
+
+
+@media (max-width: 775px) {
+    .poll-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

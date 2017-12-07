@@ -1,0 +1,23 @@
+{{!-- This is the Polls Page --}}
+
+<link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/polls.css">
+
+{{> jumbotron }}
+
+<section id="polls-page">
+
+    <div class="container">
+        <h1 class="lead poll-lead">Welcome to the {{ title }} </h1>
+
+        <ul class="list-group">
+        {{#each poll}}   
+            <li class="list-group-item">
+                <a href="/polls/{{ id }}" class="poll-names">{{ question }}<span class="small-italic">({{ votes }} votes)</span></a>
+            </li>           
+        {{/each }}
+        </ul>
+        
+    </div>
+
+</section>

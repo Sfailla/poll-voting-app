@@ -1,0 +1,7 @@
+section#register {
+    height: 100vh;
+    min-height: 800px;
+}
+.lead-register {
+    padding-top: 100px;
+}

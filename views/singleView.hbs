@@ -1,0 +1,78 @@
+{{!-- This is the Single View Page of the poll that the user selects to vote --}}
+
+<link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/singleView.css">
+
+{{> jumbotron }}
+
+
+<section id="single-view">
+
+    
+    <div class="container">
+        <h1 class="lead center padd-bottom"> {{ title }} </h1>
+    </div>
+
+    <div class="container">
+        <div class="box-wrap pt-50">
+            <div class="grid">
+                <div class="grid-item">
+                    <h2 id="poll-question" class="poll-question"> {{ poll.question }} </h2>                    
+                    <ul class="list-polls pt-25 span-font">
+                        {{#each poll.options}} 
+                            <form id="formS" action="/polls/{{ ../poll.id }}/votes/{{ id }}?_method=PUT#myChart" method="post">
+                            <li class="each-poll">
+                                <button type="submit" class="button-choices">{{ this.option }}</button>
+                                <span class="bold span-votes" id="span-votes">Votes: {{ this.votes }} </span>
+                            </li>
+                            </form>                                   
+                        {{/each }}
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <div class="chart-container">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="/js/client.js"></script>
+<script>
+
+    const optionNames = [{{{options}}}];
+    const pollData = [{{{data}}}];
+
+    const colors = ['#3e95cd', '#e6004c','#39e600','#4dffd2', '#8e5ea2','#3cba9f', '#ff4d4d', 'aqua', 'blue', 'fuchsia', 'gray', 'green','lime', 'maroon', '#FFA07A', 'navy', 'olive', 'orange', '#0000cc', '#00b3b3', 'purple', 'red', 'silver', 'teal', 'yellow', '#F0FFFF', '#FF7F50', '#40E0D0', '#008B8B', '#228B22', '#191970', '#B0E0E6'];
+    let randColorArr = [];
+    let parseCtx = parseInt(pollData);
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    for (var i = 0; i < colors.length; i++) {
+        const randColors = colors[Math.floor(Math.random() * colors.length)];
+        randColorArr.push(randColors);
+
+        let chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: optionNames,
+                datasets: [{
+                    label: "# of Votes",
+                    backgroundColor: randColorArr,
+                    data: pollData
+                }
+                ]},
+            options: {
+                title: {
+                    display: true,
+                    text: 'Number of Votes'
+                }
+            }
+        });
+        }
+</script>
+
+</section>
+

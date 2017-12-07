@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/contact.css">
+
+{{> jumbotron }}
+
+<section id="home">
+    <div class="container">
+        <h1 class="lead">Welcome to the {{ title }}</h1>
+        <div class="text-grid">
+            <div class="text-grid-item">
+                <p class="blue-text pt-25">In this application the user will be able to register an account and create polls that will be unique to that specific user.
+                    A User will have access to the polls that they created, and will be able to edit or remove them.</p>
+            </div>
+            <div class="text-grid-item">
+                <p class="blue-text pt-25">This project really gave me an excellent idea of how all parts of a full stack application are supposed to work together.  This was definately the hardest project so far but I really feel that I learned the most.</p>
+            </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container pt-50">
+        <div class="grid">
+            <div class="container columns">
+                <h3>Register</h3>
+                <p>Register and make your own account which allows you to make custom Polls!</p>                
+                <a href="/register" class="button center-m" role="button"><i class="fa fa-id-card-o" aria-hidden="true"></i>Register</a>
+            </div>
+            <div class="container columns">
+                <h3>Live Polls</h3>
+                <p>All Polls are created instantly and will update automatically for all users </p>                
+                <a href="/polls" class="button center-m" role="button"><i class="fa fa-server" aria-hidden="true"></i>Polls</a>
+            </div>
+            <div class="container columns">
+                <h3>Charts / Graphs</h3>
+                <p>Chart.js will handle all charts and graphs and will statistically track all data</p>            
+                <a href="/polls" class="button center-m" role="button"><i class="fa fa-bar-chart" aria-hidden="true"></i>Chart.js</a>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="bug-text center pt-50">Technologies used to make this application are: </h3>
+
+    <div class="container center">
+        <img src="../img/tech-img-50.png" class="center img-6-logos pt-50" alt="">
+    </div>
+
+    <div class="container">
+        <h2 class="center bug-text pt-50">Any bugs or questions can be directed to my contact info</h2>
+    </div>
+
+    <div class="spacer50"></div>
+
+</section>
+
+
+{{> contact}}

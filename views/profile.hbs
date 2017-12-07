@@ -1,0 +1,43 @@
+{{!-- This is the Profile Page --}}
+
+<link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/css/createPoll.css">
+
+{{> jumbotron }}
+
+{{#if success_msg}}
+    <div class="alert alert-success">
+        {{#each success_msg}}
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ this }}
+        {{/each}}
+    </div>
+{{/if }}
+
+
+<section id="profile">
+
+    {{!-- if there is an authenticated user we will send user info --}}
+    <div class="container">
+        {{#if hasSession}}
+            <h1 class="lead">{{ title }}</h1>
+
+            <h3 class="h3-mobile-style">Welcome {{ username }}!</h3>
+
+            <p class="blue-text text-indent">Here you will be able to create custom polls which will be submitted to the polls page where they can be viewed.  Anyone can vote on the polls but only an authenticated user can create polls.</p>
+                
+            <h1 id="myPolls" class="lead pt-50">My Polls</h1> 
+
+            {{> viewPoll}} 
+
+        <div class="new-poll pt-50 hide">
+            {{> createPoll}}
+        </div>
+
+        <div class="spacer50"></div>
+        
+        {{/if }}
+    </div>
+
+</section>

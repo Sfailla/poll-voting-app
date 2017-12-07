@@ -1,0 +1,71 @@
+section#single-view {
+    background-color: white;
+    min-height: 1000px;
+}
+ul.list-polls {
+    display: block;
+    padding-left: 0;
+    padding-bottom: 25px;
+}
+.button-choices {
+    background-color: crimson;
+    width: 200px;
+    height: auto;
+    margin-left: 0px;
+    padding: 10px 5px;
+    cursor: pointer;
+
+}
+h2.poll-question {
+    font-size: 30px;
+    font-family: 'Bree Serif', sans-serif;
+}
+.box-wrap {
+    padding: 20px;
+    margin-bottom: 100px;
+    border: 4px solid black;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+}
+.padd-bottom {
+    padding-bottom: 50px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+li.each-poll {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.span-bold {
+    font-family: 'Bree Serif', sans-serif;
+}
+.chart-container {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+canvas#myChart {
+    max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+    #myChart {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 775px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+@media (max-width: 550px) {
+    #myChart {
+        margin-top: 0;
+    }
+}

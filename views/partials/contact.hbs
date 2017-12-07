@@ -1,0 +1,37 @@
+<section id="contact">
+
+    <div class="container">
+        <h1 class="contact-h1">Contact</h1>
+        <hr id="contact-hr">
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-box">           
+            <div class="container">
+                <h3><span id="contact">Email:</span>  Sfailla1983@gmail.com</h3>
+                <h3><span id="contact">Phone:</span>  1-914-236-9635</h3>
+                <h3><span id="contact">Location:</span>  Westchester, New York</h3>                
+            </div>       
+        </div>
+        <div class="flex-box">
+            <div class="container">
+                <nav id="nav-bottom">
+                    <ul class="site-nav">
+                        <li><a class="nav-white bold" href="/">Home</a></li> 
+                        <li><a class="nav-white bold" href="/polls">Polls</a></li>                                  
+                    {{#if hasSession}}
+                        
+                        <li><a class="nav-white bold" href="/users/profile">Profile</a></li>
+                        <li><a class="nav-white bold" href="/users/logout">Logout</a></li>                   
+                    {{ else }}
+                        <li><a class="nav-white bold" href="/register">Register</a></li>
+                        <li><a class="nav-white bold" href="/users/login">Login</a></li>
+                    {{/if }}
+                    </ul>                      
+                </nav>               
+            </div>
+        </div>
+    {{!-- <div id="contact-break"></div> --}}
+    </div>
+
+</section>
