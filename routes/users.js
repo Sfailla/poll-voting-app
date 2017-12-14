@@ -13,7 +13,6 @@ Poll = require('../models/poll');
 Users.get('/profile', authenticationMiddleware(), (req, res) => {
     req.flash('success_msg', 'User successfully logged in');
     res.locals.success_msg = req.flash();
-    res.locals.success_msg = [];
 
     Poll.find({ _creator: req.user.id })
         .exec((err, polls) => {
@@ -24,6 +23,7 @@ Users.get('/profile', authenticationMiddleware(), (req, res) => {
                 res.render('profile', { title: 'Profile Page', hasSession: req.isAuthenticated(), noPolls: false, profilePage: true, username: req.user.user, user_id: req.user.id, polls: polls } );
             }        
     }); 
+    res.locals.success_msg = [];
 });
 // Post Route for submitting new poll 
 Users.post('/profile', authenticationMiddleware(), (req, res) => { 
@@ -68,7 +68,6 @@ Users.delete('/profile/:_id', authenticationMiddleware(), (req, res) => {
 // Get Route for Login Page ** Requires Registration ** 
 Users.get('/login', (req, res, next) => { 
     const string = JSON.stringify(req.user);
-    console.log('login', string);
     if (req.isAuthenticated()) {
         res.render('login', { title: 'Login Page', hasSession: req.isAuthenticated(), username: string });
     } else {
@@ -99,7 +98,7 @@ let validatePolls = (poll) => {
 // has to be with function assignment or code will break
 function authenticationMiddleware() {
     return (req, res, next) => {
-        console.log(`auth user info: ${JSON.stringify(req.session.passport)}`);
+        // console.log(`auth user info: ${JSON.stringify(req.session.passport)}`);
         // If user is authenticated the page wil be available for that user only
         if (req.isAuthenticated()) return next();
         // If Authentication fails user will be redirected to the Login Page

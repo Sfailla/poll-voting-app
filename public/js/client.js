@@ -17,10 +17,9 @@ window.onload = () => {
     // Functionality for slide-down toggle list-group to edit poll
     const acc = document.getElementsByClassName('accordian');
 
-    for (let k = 0; k < acc.length; k += 1) {
-        acc[k].onclick = () => {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            /* Toggle between adding and removing the "active" class */
             this.classList.toggle('active');
             /* Toggle between hiding and showing the active panel */
             const panel = this.nextElementSibling;
