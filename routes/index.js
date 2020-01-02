@@ -32,7 +32,7 @@ Router.post('/register', (req, res) => {
     let errors = req.validationErrors();
     // If any errors ill output them with the appropriate flash error messages
     if (errors) {
-        res.render('register', { title: 'Registration Page', alert: 'there is an error.', regErr: true, errors: errors });
+        res.render('register', { title: 'Registration Page', alert: 'there is an error.', regErr: true, errors });
     } else {
         // if there are no errors we will insert user info into database
         let user = new User();
@@ -51,9 +51,7 @@ Router.post('/register', (req, res) => {
                     
                     req.login(post.username, (err, user) => {
                         if (err) console.error(err);
-
-                        req.flash('success_msg', 'User successfully registered!');
-                        res.redirect('/users/login');
+                        res.redirect('/users/profile');
                     });
                 });
             }
