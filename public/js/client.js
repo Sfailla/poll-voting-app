@@ -5,7 +5,7 @@ window.onload = () => {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 
     mobileNavToggle.addEventListener('click', () => {
-        if (!mobileNav.classList.contains('is-open')) {
+        if (mobileNav.classList.contains('is-open')) {
             mobileNav.classList.add('is-open');
             mobileNavToggle.classList.add('is-open');
         } else if (mobileNav.classList.contains('is-open')) {

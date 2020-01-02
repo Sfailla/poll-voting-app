@@ -6,9 +6,10 @@ const Poll = require('../models/poll');
 
 // Route for Polls Page
 Polls.get('/', (req, res) => {   
-    Poll.find().exec((err, poll) => {
-        if (err) console.error(err);
-        res.render('pollsPage', { title: 'Poll Page', hasSession: req.isAuthenticated(), poll: poll } );
+    Poll.find()
+        .exec((err, poll) => {
+            if (err) return console.error(err);
+        res.render('pollsPage', { title: 'Poll Page', hasSession: req.isAuthenticated(), poll } );
     });
 }); 
 // Route for Getting Single Poll to vote on
@@ -29,9 +30,9 @@ Polls.get('/:id', (req, res) => {
                 title: 'Please Vote Below!',
                 hasSession: req.isAuthenticated(),
                 route: id,
-                poll: poll,
-                options: options,
-                data: data
+                poll,
+                options,
+                data
             });
         });
     });
