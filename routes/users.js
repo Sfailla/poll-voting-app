@@ -76,20 +76,6 @@ Users.delete(
 		});
 	}
 );
-// Get Route for Login Page
-Users.get('/login', (req, res) => {
-	res.render('login', { title: 'Login Page' });
-});
-// Post Route for the Login Forms ** Requires Passport Authentication **
-Users.post(
-	'/login',
-	passport.authenticate('local', {
-		successRedirect: '/users/profile',
-		failureRedirect: '/users/login',
-		successFlash: 'Login Successful!',
-		failureFlash: true
-	})
-);
 // Logout Route for signing out a user
 Users.get('/logout', (req, res) => {
 	req.logOut();
