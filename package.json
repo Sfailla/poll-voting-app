@@ -5,7 +5,7 @@
   "main": "server.js",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "steve failla",
   "license": "ISC",
@@ -27,5 +27,7 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
 }
