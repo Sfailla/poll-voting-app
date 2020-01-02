@@ -75,11 +75,11 @@ app.use((req, res, next) => {
 	next();
 });
 
-const routes = require('./routes/index');
+const index = require('./routes/index');
 const users = require('./routes/users');
 const polls = require('./routes/polls');
 
-app.use('/', routes);
+app.use('/', index);
 app.use('/users', users);
 app.use('/polls', polls);
 
