@@ -51,6 +51,20 @@ Router.post('/register', (req, res) => {
         });
     }
 });
+// Get Route for Login Page
+Router.get('/login', (req, res) => {
+	res.render('login', { title: 'Login Page' });
+});
+// Post Route for the Login Forms ** Requires Passport Authentication **
+Router.post(
+	'/login',
+	passport.authenticate('local', {
+		successRedirect: '/users/profile',
+		failureRedirect: '/login',
+		successFlash: 'Login Successful!',
+		failureFlash: true
+	})
+);
 
 
 module.exports = Router;
