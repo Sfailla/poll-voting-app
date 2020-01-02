@@ -1,23 +1,30 @@
 .jumbotron {
-    width: 100%;
-    min-height: 400px;
-    background: url('../img/vote-bg.png') no-repeat center center / cover;
-    color: white;
-    border-bottom: 2px solid black;
-}
-.button-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-h1.jumbotron-lead {
-    padding-top: 40px;
-}
-.newPollButton {
-    margin-right: 8px;
+	width: 100%;
+	min-height: 400px;
+	background: url('../img/vote-bg.png') no-repeat center center /
+		cover;
+	color: white;
+	border-bottom: 2px solid black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+.jumbotron-lead {
+	font-size: 1.875rem;
+	padding: 10px 0px;
+}
+
+.button-wrapper {
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+/* .newPollButton {
+	margin-right: 8px;
+} */
 
 @media (max-width: 750px) {
-
 }

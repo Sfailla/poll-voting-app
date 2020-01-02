@@ -1,122 +1,126 @@
 header {
-    width: 100%;
-    height: auto;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    background: linear-gradient(to right, lightblue, #007eff);
+	width: 100%;
+	height: 60px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	background: linear-gradient(to right, lightblue, #007eff);
 }
 .container-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 40px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 40px;
 }
 img.logo {
-    display: none;
+	display: none;
 }
 ul.site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
 }
 ul.site-nav a {
-    font-size: 20px;
+	font-size: 20px;
 }
 li {
-    /* font-size: 18px; */
-    list-style: none;
+	/* font-size: 18px; */
+	list-style: none;
 }
 a {
-    text-decoration: none;
-    /* This needs to move to just the a tags that need the margin */
-    margin-left: 10px;
-    color: white;
+	text-decoration: none;
+	/* This needs to move to just the a tags that need the margin */
+	margin-left: 10px;
+	color: white;
 }
-
 
 .mobile-nav-toggle {
-    display: none;
+	display: none;
 }
 .mobile-nav {
-    display: none;
+	display: none;
 }
 .mobile-nav li {
-    padding: 10px 0px;
-    width: 100%;
+	padding: 10px 0px;
+	width: 100%;
 }
 .mobile-nav li:hover {
-    background: royalblue;
+	background: royalblue;
 }
 .mobile-nav ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .mobile-nav:nth-child(1) {
-    padding-top: 15px;
+	padding-top: 15px;
 }
 .mobile-nav:last-child {
-    padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
-
 @media (max-width: 550px) {
-    flex-nav,
-    ul.site-nav {
-        display: none;
-    }
-    .mobile-nav {
-        width: 100%;
-        background: lightblue;
-        border-bottom: 2px solid black;
-        text-align: center;
+	flex-nav,
+	ul.site-nav {
+		display: none;
+	}
+	.mobile-nav {
+		width: 100%;
+		background: lightblue;
+		border-bottom: 2px solid black;
+		text-align: center;
 
-        transition: all 0.3s ease-in-out;
-    }
-    .is-open {
-        display: block;
-    }
-    .mobile-nav-toggle {
-        display: flex;
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        cursor: pointer;
-    }       
+		transition: all 0.3s ease-in-out;
+	}
+	.is-open {
+		display: block;
+	}
+	.mobile-nav-toggle {
+		display: flex;
+		width: 50px;
+		height: 50px;
+		align-items: center;
+		cursor: pointer;
+	}
 
-    span.target,
-    span.target:before,
-    span.target:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background: black;
-        position: relative;
+	span.target,
+	span.target:before,
+	span.target:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: black;
+		position: relative;
 
-        transition: all 0.3s ease-in-out;
-    }
-    span.target:before {
-        top: 13px;
-    }
-    span.target:after {
-        bottom: 15px;
-    }
-    
-    .mobile-nav-toggle.is-open span.target{
-        background: transparent;
-        transition: none;
-    } 
-    .mobile-nav-toggle.is-open span.target:before,
-    .mobile-nav-toggle.is-open span.target:after {
-        width: 50%;
-        transform-origin: 42% 42%;
-        transform: rotate(45deg);
-        top: 0px;
-        left: 15px;
-    }
-    .mobile-nav-toggle.is-open span.target:after {
-        transform: rotate(-45deg);
-    }
-    
+		transition: all 0.3s ease-in-out;
+	}
+	span.target:before {
+		top: 13px;
+	}
+	span.target:after {
+		bottom: 15px;
+	}
+
+	.mobile-nav-toggle.is-open span.target {
+		background: transparent;
+		transition: none;
+	}
+	.mobile-nav-toggle.is-open span.target:before,
+	.mobile-nav-toggle.is-open span.target:after {
+		width: 50%;
+		transform-origin: 42% 42%;
+		transform: rotate(45deg);
+		top: 0px;
+		left: 15px;
+	}
+	.mobile-nav-toggle.is-open span.target:after {
+		transform: rotate(-45deg);
+	}
+}
+
+nav.nav {
+	height: 56px;
+	width: 100%;
 }

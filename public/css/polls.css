@@ -1,18 +1,15 @@
 section#polls-page {
-    padding-top: 25px;
-    margin-bottom: 200px;
-    min-height: 800px;
+	padding-top: 25px;
+	margin-bottom: 200px;
+	min-height: 800px;
 }
 
 .poll-lead {
-    padding-bottom: 100px;
+	padding-bottom: 100px;
 }
 
 .poll-names {
-    display: block;
-    padding: 10px 0px;
-    color: blue;
+	display: block;
+	padding: 10px 0px;
+	color: blue;
 }
-
-
-
