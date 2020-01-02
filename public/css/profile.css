@@ -1,6 +1,12 @@
 section#profile {
     min-height: 800px;
 }
+
+.profile-text {
+    width: 500px;
+    text-align: justify;
+}
+
 .list-group-ul {
     padding-bottom: 200px;
 }

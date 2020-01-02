@@ -14,6 +14,8 @@ section#about {
     grid-gap: 5px;
 }
 .text-grid-item {
+    width: 450px;
+    margin: 0 auto;
     padding: 20px;
 }
 .text-grid-item p {
@@ -25,7 +27,8 @@ section#about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 5px;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
 
     text-align: center;
     padding: 20px 0px;
@@ -33,10 +36,21 @@ section#about {
 
 .columns {
     width: 100%;
-    background-color: lightblue;
+    height: 300px;
+    background: linear-gradient(to right, lightblue, #007eff);
     border: 2px solid black;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, .5);
 }
+
+.columns > h3 {
+    font-size: 30px;
+}
+
 .tech-container-left,
 .tech-container-right {
     padding: 25px;

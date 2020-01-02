@@ -5,7 +5,9 @@
 =============================================================================*/
 
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     outline: none;
     border: none; 
@@ -25,13 +27,12 @@ body {
     position: relative;
 }
 footer {
-    background: lightblue;
+    background: linear-gradient(to right, lightblue, #007eff);
     width: 100%;
     height: 60px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     color: black;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +46,7 @@ h1 {
 }
 
 .form-container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     padding: 40px;
     line-height: 2;
@@ -110,7 +111,7 @@ span {
     /* font-weight: bold; */
 }
 .alert-success {
-    background-color: #d3e6cb;
+    background-color: rgb(211, 230, 203);
     color:#3C763D;
     border-top: 1px solid #3c763D;
     border-bottom: 1px solid #3c763D;
@@ -188,10 +189,10 @@ input:focus {
     padding-left: 1px;
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px rgb(228, 235, 236) inset;
+    box-shadow: 0 0 0px 1000px rgb(228, 235, 236) inset;
 }
 .form-control {
-    width: 100%;
+    width: 80%;
 }
 .form-group {
     padding-bottom: 10px;
