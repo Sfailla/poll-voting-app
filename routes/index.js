@@ -45,15 +45,8 @@ Router.post('/register', (req, res) => {
                 req.flash('error_msg', 'User couldnt be created');
                 res.redirect('/register');
             } else {
-                User.findOne()
-                    .sort({ created_at: -1 })
-                    .exec((err, post) => {
-                    
-                    req.login(post.username, (err, user) => {
-                        if (err) console.error(err);
-                        res.redirect('/users/profile');
-                    });
-                });
+                req.flash('success_msg', 'User successfully registered')
+                res.redirect('/users/profile');
             }
         });
     }
