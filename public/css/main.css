@@ -56,6 +56,20 @@ h1 {
 	line-height: 2;
 }
 
+.form-control {
+	width: 80%;
+}
+
+.form-group {
+	padding-bottom: 10px;
+}
+
+.form-group input {
+	outline: none;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
 .alert-container {
 	padding: 0px 20px;
 }
@@ -213,7 +227,6 @@ label {
 .input-registration {
 	width: 100%;
 	height: 30px;
-	border-bottom: 2px solid black;
 }
 
 input:focus {
@@ -223,14 +236,6 @@ input:focus {
 
 input:-webkit-autofill {
 	box-shadow: 0 0 0px 1000px rgb(228, 235, 236) inset;
-}
-
-.form-control {
-	width: 80%;
-}
-
-.form-group {
-	padding-bottom: 10px;
 }
 /* replica of bootstrap list-group and item */
 .list-group-item {

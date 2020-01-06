@@ -1,8 +1,9 @@
-section#login{
-    height: calc(100vh - 50px);
-    min-height: 800px;
+section#login {
+	height: calc(100vh - 50px);
+	min-height: 800px;
+	outline: none;
+	border: none;
 }
 .lead-login {
-    padding-top: 100px;
+	padding-top: 100px;
 }
-
