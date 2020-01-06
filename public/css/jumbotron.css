@@ -12,8 +12,16 @@
 }
 
 .jumbotron-lead {
-	font-size: 1.875rem;
-	padding: 10px 0px;
+	font-size: 2.3rem;
+	letter-spacing: 2px;
+}
+
+.jumbotron-container {
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .button-wrapper {
