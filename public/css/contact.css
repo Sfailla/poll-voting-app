@@ -1,55 +1,52 @@
 section#contact {
-    padding-top: 25px;
-    margin-bottom: 60px;
-    color: lightblue;
-    background-color: #333;
+	min-height: 300px;
+	padding-top: 25px;
+	color: lightblue;
+	background-color: #333;
 }
 .flex-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .flex-box {
-    width: 100%;
-    border-left: 2px solid white;      
+	width: 100%;
+	border-left: 2px solid white;
 }
 .flex-box:nth-child(1) {
-    border-left: none;
+	border-left: none;
 }
 span#contact {
-    color: white !important;
+	color: white !important;
 }
 li a.nav-white {
-    color: white;
+	color: white;
 }
 section#contact h1 {
-    color: white;
-    font-size: 26px;
+	color: white;
+	font-size: 26px;
 }
 section#contact p {
-    color: white;
+	color: white;
 }
 
-
-
 @media (max-width: 750px) {
-    .flex-container {
-        flex-direction: column;
-    }
-    .flex-box {
-        border: none;
-    }
-    section#contact {
-        text-align: center;
-    }
-    section#contact ul {
-        margin: 0;
-        padding: 0;
-    }
-    #contact-hr {
-        height: 2px;
-        background-color: white;
-        width: 100px;
-    }
+	.flex-container {
+		flex-direction: column;
+	}
+	.flex-box {
+		border: none;
+	}
+	section#contact {
+		text-align: center;
+	}
+	section#contact ul {
+		margin: 0;
+		padding: 0;
+	}
+	#contact-hr {
+		height: 2px;
+		background-color: white;
+		width: 100px;
+	}
 }
