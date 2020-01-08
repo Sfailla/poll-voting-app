@@ -1,6 +1,5 @@
 section#login {
-	height: calc(100vh - 50px);
-	min-height: 800px;
+	height: calc(100vh - 60px);
 	outline: none;
 	border: none;
 }

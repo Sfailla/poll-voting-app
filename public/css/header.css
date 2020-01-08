@@ -61,7 +61,7 @@ a {
 }
 
 @media (max-width: 550px) {
-	flex-nav,
+	.flex-nav,
 	ul.site-nav {
 		display: none;
 	}
@@ -85,8 +85,8 @@ a {
 	}
 
 	span.target,
-	span.target:before,
-	span.target:after {
+	span.target::before,
+	span.target::after {
 		content: "";
 		display: block;
 		width: 100%;
@@ -97,7 +97,7 @@ a {
 		transition: all 0.3s ease-in-out;
 	}
 	span.target:before {
-		top: 13px;
+		top: 12px;
 	}
 	span.target:after {
 		bottom: 15px;
@@ -109,18 +109,17 @@ a {
 	}
 	.mobile-nav-toggle.is-open span.target:before,
 	.mobile-nav-toggle.is-open span.target:after {
-		width: 50%;
-		transform-origin: 42% 42%;
+		transform-origin: 45%;
 		transform: rotate(45deg);
 		top: 0px;
-		left: 15px;
 	}
 	.mobile-nav-toggle.is-open span.target:after {
+		transform-origin: 48%;
 		transform: rotate(-45deg);
 	}
 }
 
 nav.nav {
-	height: 56px;
+	height: 100%;
 	width: 100%;
 }

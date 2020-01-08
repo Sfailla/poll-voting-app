@@ -12,66 +12,29 @@
 	box-sizing: border-box;
 }
 
+html,
+body {
+	min-height: 100vh;
+}
+
 html {
+	position: relative;
 	background: black;
 }
 
 body {
 	padding: 0;
-	height: 100%;
 	min-width: 400px;
 	max-width: 1365px;
 	margin: 0 auto;
 	font-family: 'Roboto', 'Lato', sans-serif;
 	outline: none;
 	background: white;
-	position: relative;
-}
-
-footer {
-	background: linear-gradient(to right, lightblue, #007eff);
-	width: 100%;
-	height: 60px;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	color: black;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-h1 {
-	font-size: 24px;
 }
 
 .container {
 	padding: 20px 40px;
 	margin: 0 auto;
-}
-
-.form-container {
-	width: 70%;
-	margin: 0 auto;
-	padding: 40px;
-	line-height: 2;
-}
-
-.form-control {
-	width: 80%;
-}
-
-.form-group {
-	padding-bottom: 10px;
-}
-
-.form-group input {
-	outline: none;
-	border: none;
-	border-bottom: 2px solid black;
-}
-
-.alert-container {
-	padding: 0px 20px;
 }
 
 .page-wrapper {
@@ -126,12 +89,15 @@ span {
 	font-weight: bold !important;
 }
 /* Alert Flash Message Styling */
+.alert-container {
+	padding: 0px 20px;
+}
+
 .alert {
 	padding: 20px;
 	opacity: 1;
 	transition: opacity 0.6s;
 	margin-bottom: 5px;
-	/* font-weight: bold; */
 }
 
 .alert-success {
@@ -157,6 +123,7 @@ span {
 	background-color: #ff9800;
 	color: #ffffff;
 }
+
 /*  Style Helper Classes */
 .center-m {
 	margin: 0 auto;
@@ -209,34 +176,6 @@ span {
 	text-indent: 30px;
 }
 
-/* Form Styling */
-label {
-	display: block;
-}
-
-.update-input {
-	width: 100%;
-	height: 30px;
-	border: 1px solid black;
-	border-radius: 2px;
-	color: red;
-	padding-left: 7px;
-}
-
-.input-login,
-.input-registration {
-	width: 100%;
-	height: 30px;
-}
-
-input:focus {
-	border-bottom: 2px solid lightblue;
-	padding-left: 1px;
-}
-
-input:-webkit-autofill {
-	box-shadow: 0 0 0px 1000px rgb(228, 235, 236) inset;
-}
 /* replica of bootstrap list-group and item */
 .list-group-item {
 	border-bottom: 1px solid black;
@@ -262,6 +201,7 @@ input:-webkit-autofill {
 i {
 	margin-right: 3px;
 }
+
 /*  Media Queries  */
 @media (max-width: 775px) {
 	.lead {

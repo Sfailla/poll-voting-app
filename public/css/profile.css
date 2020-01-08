@@ -1,5 +1,11 @@
 section#profile {
-	min-height: 800px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 60px;
+}
+
+.h3-mobile-style {
+	text-align: center;
 }
 
 .profile-text {
@@ -9,7 +15,6 @@ section#profile {
 }
 
 .list-group-ul {
-	padding-bottom: 200px;
 }
 .list-group-flex {
 	max-width: 800px;

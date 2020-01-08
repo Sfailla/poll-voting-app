@@ -1,7 +1,6 @@
 section#register {
-    height: 100vh;
-    min-height: 800px;
+	height: calc(100vh - 60px);
 }
 .lead-register {
-    padding-top: 100px;
+	padding-top: 100px;
 }

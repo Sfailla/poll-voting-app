@@ -1,11 +1,10 @@
-section#createPoll {
-	min-height: 400px;
+#create-poll {
 	line-height: 2;
 	position: relative;
 	border: 2px solid black;
 	border-radius: 5px;
 }
-.closeForm {
+.close-form {
 	font-size: 35px;
 	color: black;
 	position: absolute;
@@ -13,7 +12,8 @@ section#createPoll {
 	right: 40px;
 	cursor: pointer;
 }
-.optionButton {
+
+.option-button {
 	background: royalblue;
 }
 
