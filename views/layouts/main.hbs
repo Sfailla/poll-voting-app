@@ -7,22 +7,34 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Bree+Serif|Baloo+Tammudu">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/jumbotron.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    {{!-- <link rel="stylesheet" href="/css/polls.css"> --}}
+    <link rel="stylesheet" href="/css/createPoll.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <link rel="stylesheet" href="/css/{{css}}">
+    
+
     <title>Voting App</title>
 </head>
 
+
+    <body>
     {{> header }}
 
-    <body>        
+    {{> jumbotron }}
 
     {{{ body }}}
 
+    {{> footer }}
+    
     </body>
 
-    {{> footer }}
     
     <script src="/js/client.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>

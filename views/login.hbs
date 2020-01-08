@@ -1,36 +1,27 @@
 {{!-- This is the Login Page --}}
 
-
-{{#if error}}
-    <div class="alert alert-danger">
-        {{#each error}}
-            <span class="closebtn" onclick="this.parentElement.style.opacity=0">&times;</span>
-            {{ this }}
-        {{/each}}
-    </div>
-{{/if }}
-
-{{#if success_msg}}
-    <div class="alert alert-success">
-        {{#each success_msg}}
-            <span class="closebtn" onclick="this.parentElement.style.opacity=0">&times;</span>
-            {{ this }}
-        {{/each}}
-    </div>
-{{/if }}
-
-
-<link rel="stylesheet" href="/css/login.css">
 <section id="login">
 
+    {{#if error}}
+        <div class="alert alert-danger">
+            {{#each error}}
+                <span class="closebtn" onclick="this.parentElement.style.opacity=0">&times;</span>
+                {{ this }}
+            {{/each}}
+        </div>
+    {{/if }}
+
+    {{#if success_msg}}
+        <div class="alert alert-success">
+            {{#each success_msg}}
+                <span class="closebtn" onclick="this.parentElement.style.opacity=0">&times;</span>
+                {{ this }}
+            {{/each}}
+        </div>
+    {{/if }}
+
     <div class="container lead-login">
-        {{#if hasSession }}
-            <h3>Thankyou {{ username }} for registering!</h3>
-        {{/if }}
-
         <h1>{{ title }}</h1>
-
-        <p>Welcome to the {{ title }} </p>
     </div>
 
     <div class="form-container">

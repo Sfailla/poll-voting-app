@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <nav class="nav">
         <div class="container-nav">
             <img class="logo" src="" alt="">
@@ -25,21 +25,18 @@
         </div>
     </nav>
 
-</header>
+    <div class="mobile-nav">    
+        <ul>
+            <li><a class="bold" href="/">Home</a></li>
+            <li><a class="bold" href="/polls">Polls</a></li>                                   
+        {{#if hasSession}}               
+            <li><a class="bold" href="/users/profile">Profile</a></li>
+            <li><a class="bold" href="/users/logout">Logout</a></li>                   
+        {{else }}                
+            <li><a class="bold" href="/register">Register</a></li>
+            <li><a class="bold" href="/login">Login</a></li>
+        {{/if }}                           
+        </ul>  
+    </div>
 
- <div class="mobile-nav">    
-    <ul>
-        <li><a class="bold" href="/">Home</a></li>
-        <li><a class="bold" href="/polls">Polls</a></li>                                   
-    {{#if hasSession}}               
-        <li><a class="bold" href="/users/profile">Profile</a></li>
-        <li><a class="bold" href="/users/logout">Logout</a></li>                   
-    {{else }}                
-        <li><a class="bold" href="/register">Register</a></li>
-        <li><a class="bold" href="/login">Login</a></li>
-    {{/if }}                           
-    </ul>  
-</div>
-
-
-    
+</header>    
