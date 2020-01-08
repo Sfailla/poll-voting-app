@@ -1,7 +1,8 @@
 section#footer {
 	background: linear-gradient(to right, lightblue, #007eff);
-	width: 100%;
 	height: 60px;
+	width: 100%;
+	max-width: 1365px;
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
 	color: black;
