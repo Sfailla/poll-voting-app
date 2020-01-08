@@ -1,14 +1,5 @@
 {{!-- This is the Single View Page of the poll that the user selects to vote --}}
-
-{{!-- <link rel="stylesheet" href="/css/jumbotron.css">
-<link rel="stylesheet" href="/css/singleView.css"> --}}
-
-{{> jumbotron }}
-
-
-<section id="single-view">
-
-    
+<section id="single-view">    
     <div class="container">
         <h1 class="lead center padd-bottom"> {{ title }} </h1>
     </div>
@@ -37,6 +28,7 @@
             </div>            
         </div>
     </div>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="/js/client.js"></script>
@@ -45,13 +37,49 @@
     const optionNames = [{{{options}}}];
     const pollData = [{{{data}}}];
 
-    const colors = ['#3e95cd', '#e6004c','#39e600','#4dffd2', '#8e5ea2','#3cba9f', '#ff4d4d', 'aqua', 'blue', 'fuchsia', 'gray', 'green','lime', 'maroon', '#FFA07A', 'navy', 'olive', 'orange', '#0000cc', '#00b3b3', 'purple', 'red', 'silver', 'teal', 'yellow', '#F0FFFF', '#FF7F50', '#40E0D0', '#008B8B', '#228B22', '#191970', '#B0E0E6'];
+    const colors = [
+        '#3e95cd', 
+        '#e6004c',
+        '#39e600',
+        '#4dffd2', 
+        '#8e5ea2',
+        '#3cba9f', 
+        '#ff4d4d', 
+        'aqua', 
+        'blue', 
+        'fuchsia', 
+        'gray', 
+        'green',
+        'lime', 
+        'maroon', 
+        '#FFA07A', 
+        'navy', 
+        'olive', 
+        'orange', 
+        '#0000cc', 
+        '#00b3b3', 
+        'purple', 
+        'red', 
+        'silver', 
+        'teal', 
+        'yellow', 
+        '#F0FFFF', 
+        '#FF7F50', 
+        '#40E0D0', 
+        '#008B8B', 
+        '#228B22', 
+        '#191970', 
+        '#B0E0E6'
+    ];
     let randColorArr = [];
     let parseCtx = parseInt(pollData);
     const ctx = document.getElementById('myChart').getContext('2d');
 
     for (var i = 0; i < colors.length; i++) {
-        const randColors = colors[Math.floor(Math.random() * colors.length)];
+        const randColors = colors[
+            Math.floor(Math.random() * colors.length)
+        ];
+    
         randColorArr.push(randColors);
 
         let chart = new Chart(ctx, {
@@ -73,6 +101,3 @@
         });
         }
 </script>
-
-</section>
-
