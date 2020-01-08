@@ -23,12 +23,14 @@ Users.get('/profile', authenticationMiddleware(), (req, res) => {
 			hasSession: req.isAuthenticated(),
 			noPolls: !polls.length ? true : false,
 			profilePage: true,
+			css: 'profile.css',
 			username: req.user.user,
 			user_id: req.user.id,
-			polls: polls
+			polls
 		});
 	});
 });
+
 // Post Route for submitting new poll
 Users.post('/profile', authenticationMiddleware(), (req, res) => {
 	if (validatePolls(req.body)) {
@@ -49,10 +51,11 @@ Users.post('/profile', authenticationMiddleware(), (req, res) => {
 			res.redirect('/users/profile');
 		});
 	} else {
-		console.log('poll is rejected');
+		req.flash('error_msg', 'poll is rejected');
 		res.status(404).redirect('/users/profile');
 	}
 });
+
 // Put Route to update or edit a poll
 Users.put('/profile/:_id', authenticationMiddleware(), (req, res) => {
 	const id = req.params._id;
@@ -64,6 +67,7 @@ Users.put('/profile/:_id', authenticationMiddleware(), (req, res) => {
 		res.redirect('/users/profile');
 	});
 });
+
 // Delete a Poll
 Users.delete(
 	'/profile/:_id',
@@ -76,6 +80,7 @@ Users.delete(
 		});
 	}
 );
+
 // Logout Route for signing out a user
 Users.get('/logout', (req, res) => {
 	req.logOut();
@@ -83,6 +88,7 @@ Users.get('/logout', (req, res) => {
 		res.status(401).redirect('/');
 	});
 });
+
 // custom function to validate a poll before its created
 let validatePolls = poll => {
 	return (
@@ -91,6 +97,7 @@ let validatePolls = poll => {
 		poll.options !== ''
 	);
 };
+
 // Custom Passport Authentication Middleware
 // has to be with function assignment or code will break
 function authenticationMiddleware() {

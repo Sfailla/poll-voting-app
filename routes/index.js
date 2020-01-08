@@ -9,12 +9,21 @@ const User = require('../models/user');
 
 // Get Route for the HomePage
 Router.get('/', (req, res) => {
-    res.render('home', { title: 'Home Page', hasSession: req.isAuthenticated(), homePage: true });
+    res.render('home', { 
+        title: 'Home Page',
+        css: 'home.css',
+        hasSession: req.isAuthenticated(), 
+        homePage: true 
+    });
 });
 // Get Route for the registration page
 Router.get('/register', (req, res) => {
     let username = req.user;
-    res.render('register', { title: 'Registration Page', register: true, username: username });
+    res.render('register', { 
+        title: 'Registration Page', 
+        css: 'register.css',
+        register: true
+    });
 });
 // Post Route for the registration page
 Router.post('/register', (req, res) => {
@@ -53,7 +62,7 @@ Router.post('/register', (req, res) => {
 });
 // Get Route for Login Page
 Router.get('/login', (req, res) => {
-	res.render('login', { title: 'Login Page' });
+	res.render('login', { title: 'Login Page', css: 'login.css' });
 });
 // Post Route for the Login Forms ** Requires Passport Authentication **
 Router.post(
