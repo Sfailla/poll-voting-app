@@ -28,8 +28,10 @@ mongoose
 	// Establish DB connection and log to console
 	.then(() => console.log('Mongooose Connected to MLAB...'))
 	.catch(err => console.log(err));
+
 // Configuring the Application Static Files
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Express Handlebars Templating init
 app.engine(
 	'hbs',
@@ -43,6 +45,7 @@ app.engine(
 // app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
+
 // Configuring the Application MiddleWare
 app.use(logger('dev'));
 app.use(bodyParser.json());
