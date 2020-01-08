@@ -32,16 +32,28 @@ mongoose
 // Configuring the Application Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 
+const hbs = exphbs.create({
+	extname: 'hbs',
+	defaultLayout: 'main',
+	partialsDir: path.join(__dirname, '/views/partials'),
+	layoutsDir: path.join(__dirname, '/views/layouts'),
+	helpers: {
+		listCSS: () => {
+			const list = [
+				'contact.css',
+				'createPoll.css',
+				'footer.css',
+				'forms.css',
+				'header.css',
+				'jumbotron.css',
+				'main.css'
+			];
+			return list;
+		}
+	}
+});
 // Express Handlebars Templating init
-app.engine(
-	'hbs',
-	exphbs({
-		extname: 'hbs',
-		defaultLayout: 'main',
-		partialsDir: path.join(__dirname, '/views/partials'),
-		layoutsDir: path.join(__dirname, '/views/layouts')
-	})
-);
+app.engine('hbs', hbs.engine);
 // app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
