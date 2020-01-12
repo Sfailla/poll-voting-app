@@ -4,7 +4,9 @@ header {
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
 	background: linear-gradient(to right, lightblue, #007eff);
+	z-index: 10;
 }
+
 .container-nav {
 	width: 100%;
 	height: 100%;
@@ -13,25 +15,28 @@ header {
 	justify-content: space-between;
 	padding: 0px 40px;
 }
+
 img.logo {
 	display: none;
 }
+
 ul.site-nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
 }
+
 ul.site-nav a {
 	font-size: 20px;
 }
+
 li {
-	/* font-size: 18px; */
 	list-style: none;
 }
+
 a {
 	text-decoration: none;
-	/* This needs to move to just the a tags that need the margin */
 	margin-left: 10px;
 	color: white;
 }
@@ -39,43 +44,58 @@ a {
 .mobile-nav-toggle {
 	display: none;
 }
+
 .mobile-nav {
 	display: none;
 }
+
 .mobile-nav li {
 	padding: 10px 0px;
 	width: 100%;
+	height: 40px;
 }
+
 .mobile-nav li:hover {
 	background: royalblue;
 }
+
 .mobile-nav ul {
 	margin: 0;
 	padding: 0;
 }
-.mobile-nav:nth-child(1) {
+
+/* .mobile-nav:nth-child(1) {
 	padding-top: 15px;
 }
+
 .mobile-nav:last-child {
 	padding-bottom: 15px;
-}
+} */
 
 @media (max-width: 550px) {
 	.flex-nav,
 	ul.site-nav {
 		display: none;
 	}
+
 	.mobile-nav {
-		width: 100%;
-		background: lightblue;
+		background: gray;
+		padding: 20px 10px;
+		width: 100vw;
+		position: relative;
+		transform: translateY(-130%);
+
 		border-bottom: 2px solid black;
 		text-align: center;
-
 		transition: all 0.3s ease-in-out;
 	}
+
 	.is-open {
 		display: block;
+		transform: translateY(0%);
+		transition: all 0.3s ease-in-out;
 	}
+
 	.mobile-nav-toggle {
 		display: flex;
 		width: 50px;
@@ -94,11 +114,14 @@ a {
 		background: black;
 		position: relative;
 
+		transform-origin: center;
 		transition: all 0.3s ease-in-out;
 	}
+
 	span.target:before {
 		top: 12px;
 	}
+
 	span.target:after {
 		bottom: 15px;
 	}
@@ -107,14 +130,15 @@ a {
 		background: transparent;
 		transition: none;
 	}
+
 	.mobile-nav-toggle.is-open span.target:before,
 	.mobile-nav-toggle.is-open span.target:after {
-		transform-origin: 45%;
 		transform: rotate(45deg);
 		top: 0px;
 	}
+
 	.mobile-nav-toggle.is-open span.target:after {
-		transform-origin: 48%;
+		top: -3px;
 		transform: rotate(-45deg);
 	}
 }
