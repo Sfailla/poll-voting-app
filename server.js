@@ -98,6 +98,10 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/polls', polls);
 
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'views', 'layouts', 'main.hbs'));
+});
+
 const User = require('./models/user');
 
 // Local Passport Strategy
@@ -134,4 +138,5 @@ passport.deserializeUser((user_id, done) => {
 
 app.listen(port, () => {
 	console.log(`Server running on port: ${port}`);
+	console.log(`node env = ${process.env.NODE_ENV}`);
 });
