@@ -8,6 +8,10 @@
 		"start": "nodemon server.js",
 		"build": "NODE_ENV=production && npm run start"
 	},
+	"engines": {
+		"node": "10.15.1",
+		"npm": "6.4.1"
+	},
 	"author": "steve failla",
 	"license": "ISC",
 	"dependencies": {
