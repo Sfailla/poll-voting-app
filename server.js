@@ -23,7 +23,8 @@ const config = require('./config/index');
 // mongoose connection
 mongoose
 	.connect(config.getDbConnection(), {
-		useMongoClient: true
+		useNewUrlParser: true,
+		useUnifiedTopology: true
 	})
 	// Establish DB connection and log to console
 	.then(() => console.log('Mongooose Connected to MLAB...'))
