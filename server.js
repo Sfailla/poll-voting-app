@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
@@ -18,11 +19,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
-// stores databass username and password
-const config = require('./config/index');
 // mongoose connection
 mongoose
-	.connect(config.getDbConnection(), {
+	.connect(process.env.MONGOOSE_URI, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	})
